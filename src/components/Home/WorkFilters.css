@@ -1,0 +1,5 @@
+.selected {
+    background-color:#FFAF52;
+    border:2px solid #FFAF52;
+    transition: all 0.1s ease 0s;
+}
