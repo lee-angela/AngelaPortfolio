@@ -2,58 +2,95 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import styled from "@emotion/styled";
 import WorkFiltersCss from "./WorkFilters.css";
+import FilterPill from "./FilterPill";
 
 export default function WorkFilters({
-    callbackFunc,
-    selectedFilters
+    prodDevFilterState,
+    setProdDevFilterState,
+    gtmFilterState,
+    setGtmFilterState,
+    engFilterState,
+    setEngFilterState,
+    marketingFilterState,
+    setMarketingFilterState,
+    salesFilterState,
+    setSalesFilterState,
+    designFilterState,
+    setDesignFilterState
 }) {
 
-    function handleClick() {
-        console.log("clicked");
-        callbackFunc();
+    function clearAll() {
+        setProdDevFilterState(false);
+        setGtmFilterState(false);
+        setEngFilterState(false);
+        setMarketingFilterState(false);
+        setSalesFilterState(false);
+        setDesignFilterState(false);
     }
+    function selectAll() {
+        setProdDevFilterState(true);
+        setGtmFilterState(true);
+        setEngFilterState(true);
+        setMarketingFilterState(true);
+        setSalesFilterState(true);
+        setDesignFilterState(true);
+    }
+
     return (
         <FilterContainer>
             <FilterHeader>
-                FILTER WORK BY CATEGORY
+                <LeftHeader>FILTER WORK BY CATEGORY</LeftHeader>
+                <RightActionContainer>
+                    <RightActions
+                        onClick={clearAll}>
+                        CLEAR ALL
+                    </RightActions>
+                    <RightActions
+                        onClick={selectAll}>
+                        SELECT ALL
+                    </RightActions>
+                </RightActionContainer>
             </FilterHeader>
 
             <FilterPill 
-                onClick={handleClick}
-                className={selectedFilters.product_development ? "selected" : ""}>
-                PRODUCT DEVELOPMENT STRATEGY
-            </FilterPill>
+                id="product_development"
+                currState={prodDevFilterState}
+                callbackFunc={setProdDevFilterState}
+                displayText="PRODUCT DEVELOPMENT STRATEGY"
+                className={prodDevFilterState ? "selected" : ""} />
             <FilterPill 
-                onClick={handleClick}
-                className={selectedFilters.product_development ? "selected" : ""}>
-                GO-TO-MARKET STRATEGY
-            </FilterPill>
+                currState={gtmFilterState}
+                callbackFunc={setGtmFilterState}
+                displayText="PRODUCT DEVELOPMENT STRATEGY"
+                className={gtmFilterState ? "selected" : ""} />
             <FilterPill 
-                onClick={handleClick}
-                className={selectedFilters.product_development ? "selected" : ""}>
-                ENGINEERING
-            </FilterPill>
+                currState={engFilterState}
+                callbackFunc={setEngFilterState}
+                displayText="ENGINEERING"
+                className={engFilterState ? "selected" : ""} />
             <FilterPill 
-                onClick={handleClick}
-                className={selectedFilters.product_development ? "selected" : ""}>
-                MARKETING 
-            </FilterPill>
+                currState={marketingFilterState}
+                callbackFunc={setMarketingFilterState}
+                displayText="MARKETING"
+                className={marketingFilterState ? "selected" : ""} />
             <FilterPill 
-                onClick={handleClick}
-                className={selectedFilters.product_development ? "selected" : ""}>  
-                SALES
-            </FilterPill>
+                currState={salesFilterState}
+                callbackFunc={setSalesFilterState}
+                displayText="SALES"
+                className={salesFilterState ? "selected" : ""} />
             <FilterPill 
-                onClick={handleClick}
-                className={selectedFilters.product_development ? "selected" : ""}>
-                DESIGN + USER EXPERIENCE
-            </FilterPill>
+                currState={designFilterState}
+                callbackFunc={setDesignFilterState}
+                displayText="DESIGN + USER EXPERIENCE"
+                className={designFilterState ? "selected" : ""} />
         </FilterContainer>
     );
 }
 
 const FilterHeader = styled.div`
+    display:block;
     font-family:'Space Mono', monospace;
+    margin-bottom:20px;
 `;
 
 const FilterContainer = styled.div`
@@ -61,21 +98,23 @@ const FilterContainer = styled.div`
     margin-top:50px;
     width:80%;
 `;
-
-const FilterPill = styled.div`
-    font-family: 'Space Mono', monospace;
-    border-radius:20px;
+const LeftHeader = styled.div`
     display:inline-block;
-    padding:5px 25px;
-    margin:10px 20px 10px 0;
-    border:2px solid black;
-    box-sizing: border-box;
-    transition: all 0.1s ease 0s;
-    :hover {
-        cursor:pointer;
-        background-color:#FFAF52;
-        border:2px solid #FFAF52;
-        transition: all 0.1s ease 0s;
+`;
 
+const RightActionContainer = styled.div`
+    float:right;
+    right:0;
+`;
+const RightActions = styled.div`
+    display:inline-block;
+    margin-left:40px;
+    right:0;
+    transition: all 0.1s ease 0s;
+    :hover{
+        cursor:pointer;
+        color:#0500FF;
+        transition: all 0.1s ease 0s;
     }
 `;
+

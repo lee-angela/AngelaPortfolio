@@ -1,5 +1,11 @@
 .selected {
     background-color:#FFAF52;
-    border:2px solid #FFAF52;
+    border:2px solid #FFAF52!important;
+    transition: all 0.1s ease 0s;
+}
+
+.selected:hover {
+    background-color:#ffc685!important;
+    border:2px solid #ffc685!important;
     transition: all 0.1s ease 0s;
 }

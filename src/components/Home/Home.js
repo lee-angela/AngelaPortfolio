@@ -16,19 +16,13 @@ import styled from "@emotion/styled";
 
 
 export default function Home() {
-  
-  function toggleFilter() {
-    console.log("callbackfunc called");
-  }
 
-  const [selectedFilters, setSelectedFilters] = React.useState({
-    product_development: true,
-    go_to_market_strategy: true,
-    engineering: true,
-    marketing: true, 
-    sales: true, 
-    design: true
-  });
+  const [prodDevFilterState, setProdDevFilterState] = React.useState(true);
+  const [gtmFilterState, setGtmFilterState] = React.useState(true);
+  const [engFilterState, setEngFilterState] = React.useState(true);
+  const [marketingFilterState, setMarketingFilterState] = React.useState(true);
+  const [salesFilterState, setSalesFilterState] = React.useState(true);
+  const [designFilterState, setDesignFilterState] = React.useState(true);
 
   return (
     <section>
@@ -53,8 +47,18 @@ export default function Home() {
           </Row>
 
           <WorkFilters 
-            callbackFunc={toggleFilter} 
-            selectedFilters={selectedFilters}
+            prodDevFilterState={prodDevFilterState}
+            setProdDevFilterState={setProdDevFilterState}
+            gtmFilterState={gtmFilterState}
+            setGtmFilterState={setGtmFilterState}
+            engFilterState={engFilterState}
+            setEngFilterState={setEngFilterState}
+            marketingFilterState={marketingFilterState}
+            setMarketingFilterState={setMarketingFilterState}
+            salesFilterState={salesFilterState}
+            setSalesFilterState={setSalesFilterState}
+            designFilterState={designFilterState}
+            setDesignFilterState={setDesignFilterState}
           />
 
           <Container fluid className="project-section">
