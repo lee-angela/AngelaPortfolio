@@ -29,15 +29,16 @@ export default function About() {
                   <img src={profilepic} style={{"maxWidth":"70%"}}/> 
                 </ProfilePic>
                 <ProfileLinks>
-                  <Blurb>I'm based in NYC. I'm currently open to NYC-based or remote roles in the tech space. Please feel free to reach out! I'd love to chat. </Blurb>
+                  <Blurb>Hi there! I'm Angela – I love to create things. Whether it's coding new solutions, building creative strategies, or creating beautiful, user-centric designs, I thrive wearing many hats that rely on technical, creative, and strategic expertise.  </Blurb>
+                  <Blurb>I'm currently open to new NYC-based or remote roles in the tech space. Please feel free to reach out! I'd love to chat.</Blurb>
                   <p><span style={{"fontFamily":"Space Mono, monospace"}}>LINKEDIN:</span> <CustomLink href="https://www.linkedin.com/in/lee-angela">linkedin.com/in/lee-angela  <MdArrowRightAlt/> </CustomLink> </p>
                   <p><span style={{"fontFamily":"Space Mono, monospace"}}>RESUME:</span> <CustomLink href={pdf}>download my resume <MdArrowRightAlt/> </CustomLink> </p>
                   <p><span style={{"fontFamily":"Space Mono, monospace"}}>EMAIL:</span> <CustomLink href="mailto:lee.angela.ny@gmail.com">lee.angela.ny@gmail.com  <MdArrowRightAlt/> </CustomLink> </p>
                   <hr />
-                  <p><span style={{"fontFamily":"Space Mono, monospace"}}>EDUCATION:</span> University of Pennsylvania (BSE, Digital Media Design – Computer Science/Computer Graphics) </p>
+                  <p><span style={{"fontFamily":"Space Mono, monospace"}}>EDUCATION:</span> University of Pennsylvania '16</p>
+                  <p>BSE, Digital Media Design <br></br>(Computer Science/Computer Graphics) <CustomLink href="http://cg.cis.upenn.edu/dmd.html">learn more <MdArrowRightAlt/> </CustomLink> </p>
                   <hr />
-                  <Blurb>Just for fun – I make ceramics, clothes, and DIY interior decor.</Blurb>
-                  <p><span style={{"fontFamily":"Space Mono, monospace"}}>CERAMICS:</span> University of Pennsylvania (BSE, Digital Media Design – Computer Science/Computer Graphics) </p>
+                  <p><span style={{"fontFamily":"Space Mono, monospace"}}>JUST FOR FUN:</span>I make ceramics, clothes, and DIY interior decor. <CustomLink href="https://instagram.com/angelamakesthings">@angelamakesthings <MdArrowRightAlt/> </CustomLink></p>
 
                 </ProfileLinks>
               </InfoContainer>
