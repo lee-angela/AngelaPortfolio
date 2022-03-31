@@ -45,7 +45,7 @@ export default function Home() {
       "projectId":"forter-newwebsite",
       "tags":["GO-TO-MARKET STRATEGY", "ENGINEERING", "MARKETING", "SALES", "DESIGN"],
       "title":"FORTER: WEBSITE AND BRAND REFRESH",
-      "description":"My personal blog page build with Next.js and Tailwind Css which takes the content from makdown files and renders it using Next.js. Supports dark mode and easy to write blogs using markdown.",
+      "description":"Designed and launched a new website and brand.",
       "imgPath":`${forter_newbrand}`,
       "display":"true"
     },
@@ -53,7 +53,7 @@ export default function Home() {
       "projectId":"forter-salesfeedbackloop",
       "tags":["GO-TO-MARKET STRATEGY", "MARKETING", "SALES"],
       "title":"FORTER: SALES FEEDBACK LOOP AND INTERNAL DOCUMENTATION",
-      "description":"Established the first official feedback loop with Forter's sales team through win/loss interviews that became commonplace across the organization.",
+      "description":"Established the first official sales feedback loop (interviews, debriefs, and internal publications).",
       "imgPath":`${forter_customers}`,
       "display":"true"
     },
@@ -61,7 +61,7 @@ export default function Home() {
       "projectId":"forter-productpackaging",
       "tags":["GO-TO-MARKET STRATEGY", "MARKETING", "SALES"],
       "title":"FORTER: PRODUCT PACKAGING",
-      "description":"Strategized packaging, bundling, and naming of products to expand and best represent the scope of Forter's offerings.",
+      "description":"Strategized packaging, bundling, and naming of Forter's products to expand the scope of Forter's offerings.",
       "imgPath":`${forter_packaging}`,
       "display":"true"
     },
@@ -69,7 +69,7 @@ export default function Home() {
       "projectId":"datadog-synthetics",
       "tags":["PRODUCT DEVELOPMENT STRATEGY", "GO-TO-MARKET STRATEGY", "ENGINEERING", "MARKETING", "SALES", "DESIGN"],
       "title":"DATADOG: DATADOG SYNTHETICS PRODUCT LAUNCH",
-      "description":"Launched the last product before Datadog's IPO in 2019. Product was geared towards a new, front-end developer audience – new strategy, messaging, content, and training was needed.",
+      "description":"Launched the technical product to a new audience: front-end developers. This required new messaging, content, and training.",
       "imgPath":`${datadog_synthetics}`,
       "display":"true"
     },
@@ -77,7 +77,7 @@ export default function Home() {
       "projectId":"datadog-browsertestdemo",
       "tags":["PRODUCT DEVELOPMENT STRATEGY", "GO-TO-MARKET STRATEGY", "ENGINEERING", "MARKETING", "SALES", "DESIGN"],
       "title":"DATADOG: BROWSER TEST DEMO",
-      "description":"Collaborated with Datadog's engineering team to create and maintain a new customer-facing demo site for the new Browser Testing product.",
+      "description":"Created a new customer-facing demo site for the new Browser Testing product.",
       "imgPath":`${datadog_browsertestdemo}`,
       "display":"true"
     },
@@ -95,14 +95,12 @@ export default function Home() {
                 Hi, I’m Angela. Previously @ Apple, Datadog, and Forter. I'm an active coder, designer, and entrepreneur – I currently specialize in product strategy at hyper-scaling SaaS organizations.
               </HeadingDescription>
             </Col>
-            <Col md={5} style={{ paddingBottom: 20 }}>
-              <img
+            <img
                 src={ellipse2}
                 alt="home pic"
                 className="img-fluid"
                 style={{ "width": "800px", "position":"absolute", "right": "-20%", "zIndex": "-1"}}
               />
-            </Col>
           </Row>
 
           <WorkFilters 

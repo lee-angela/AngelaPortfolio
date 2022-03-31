@@ -16,7 +16,7 @@ export default function ProjectCards(props) {
       <CardTitle>{props.title}</CardTitle>
 
       <CardDescription>
-        <p>{props.description} <Link to={props.link} style={{"color":"#0500FF","textDecoration":"none"}}>Read more &gt;</Link></p>
+        <p>{props.description} <Link to={props.link} style={{"color":"#0500FF","textDecoration":"none"}}>Read more <MdArrowRightAlt/> </Link></p>
       </CardDescription>
 
       <TagContainer>
