@@ -31,6 +31,57 @@ export default function Home() {
   const [progressaryFilterState, setProgressaryFilterState] = React.useState(true);
   const [waFilterState, setWaFilterState] = React.useState(false);
 
+  //obj of all projects and their tags (as if pulled from DB)
+  let projectFilters = [
+    {
+      "projectId":"forter-forterelement",
+      "tags":["PRODUCT DEVELOPMENT STRATEGY", "GO-TO-MARKET STRATEGY", "ENGINEERING", "MARKETING", "SALES", "DESIGN"],
+      "title":"FORTER: FORTER ELEMENT FOR PSPs",
+      "description":"Launched Forter's core, fraud-prevention software-as-a-service for a new, one-to-many distribution channel.",
+      "imgPath":`${forter_element}`,
+      "display":"true"
+    },
+    {
+      "projectId":"forter-newwebsite",
+      "tags":["GO-TO-MARKET STRATEGY", "ENGINEERING", "MARKETING", "SALES", "DESIGN"],
+      "title":"FORTER: WEBSITE AND BRAND REFRESH",
+      "description":"My personal blog page build with Next.js and Tailwind Css which takes the content from makdown files and renders it using Next.js. Supports dark mode and easy to write blogs using markdown.",
+      "imgPath":`${forter_newbrand}`,
+      "display":"true"
+    },
+    {
+      "projectId":"forter-salesfeedbackloop",
+      "tags":["GO-TO-MARKET STRATEGY", "MARKETING", "SALES"],
+      "title":"FORTER: SALES FEEDBACK LOOP AND INTERNAL DOCUMENTATION",
+      "description":"Established the first official feedback loop with Forter's sales team through win/loss interviews that became commonplace across the organization.",
+      "imgPath":`${forter_customers}`,
+      "display":"true"
+    },
+    {
+      "projectId":"forter-productpackaging",
+      "tags":["GO-TO-MARKET STRATEGY", "MARKETING", "SALES"],
+      "title":"FORTER: PRODUCT PACKAGING",
+      "description":"Strategized packaging, bundling, and naming of products to expand and best represent the scope of Forter's offerings.",
+      "imgPath":`${forter_packaging}`,
+      "display":"true"
+    },
+    {
+      "projectId":"datadog-synthetics",
+      "tags":["PRODUCT DEVELOPMENT STRATEGY", "GO-TO-MARKET STRATEGY", "ENGINEERING", "MARKETING", "SALES", "DESIGN"],
+      "title":"DATADOG: DATADOG SYNTHETICS PRODUCT LAUNCH",
+      "description":"Launched the last product before Datadog's IPO in 2019. Product was geared towards a new, front-end developer audience – new strategy, messaging, content, and training was needed.",
+      "imgPath":`${datadog_synthetics}`,
+      "display":"true"
+    },
+    {
+      "projectId":"datadog-browsertestdemo",
+      "tags":["PRODUCT DEVELOPMENT STRATEGY", "GO-TO-MARKET STRATEGY", "ENGINEERING", "MARKETING", "SALES", "DESIGN"],
+      "title":"DATADOG: BROWSER TEST DEMO",
+      "description":"Collaborated with Datadog's engineering team to create and maintain a new customer-facing demo site for the new Browser Testing product.",
+      "imgPath":`${datadog_browsertestdemo}`,
+      "display":"true"
+    },
+  ];
 
   return (
     <section>
@@ -79,55 +130,15 @@ export default function Home() {
           />
 
           <ProjectCardContainer>
-            <ProjectCard
-              imgPath={forter_element}
-              isBlog={false}
-              title="FORTER: FORTER ELEMENT FOR PSPs"
-              description="Launched Forter's core, fraud-prevention software-as-a-service for a new, one-to-many distribution channel."
-              link="/forter-forterelement"
-            />
-
-            <ProjectCard
-              imgPath={forter_newbrand}
-              isBlog={false}
-              title="FORTER: WEBSITE AND BRAND REFRESH"
-              description="My personal blog page build with Next.js and Tailwind Css which takes the content from makdown files and renders it using Next.js. Supports dark mode and easy to write blogs using markdown."
-              link="/forter-newwebsite"
-            />
-
-            <ProjectCard
-              imgPath={forter_customers}
-              isBlog={false}
-              title="FORTER: SALES FEEDBACK LOOP AND INTERNAL DOCUMENTATION"
-              description="Established the first official feedback loop with Forter's sales team through win/loss interviews that became commonplace across the organization."
-              link="/forter-salesfeedbackloop"
-            />
-            
-            <ProjectCard
-              imgPath={forter_packaging}
-              isBlog={false}
-              title="FORTER: PRODUCT PACKAGING"
-              description="Strategized packaging, bundling, and naming of products to expand and best represent the scope of Forter's offerings."
-              link="/forter-productpackaging"
-            />
-
-            <ProjectCard
-              imgPath={datadog_synthetics}
-              isBlog={false}
-              title="DATADOG: DATADOG SYNTHETICS PRODUCT LAUNCH"
-              description="Launched the last product before Datadog's IPO in 2019. Product was geared towards a new, front-end developer audience – new strategy, messaging, content, and training was needed."
-              link="/datadog-synthetics"
-            />
-
-            <ProjectCard
-              imgPath={datadog_browsertestdemo}
-              isBlog={false}
-              title="DATADOG: BROWSER TEST DEMO"
-              description="Collaborated with Datadog's engineering team to create and maintain a new customer-facing demo site for the new Browser Testing product."
-              link="/datadog-browsertestdemo"
-            />
-
-            
+            {projectFilters.map((project, i) => (
+              <ProjectCard
+                imgPath={project.imgPath}
+                title={project.title}
+                description={project.description}
+                link={`/${project.projectId}`}
+                tags={project.tags}
+              />
+            ))}
           </ProjectCardContainer>
             
       </CustomContainer>
@@ -155,7 +166,7 @@ const HeadingDescription = styled.h1`
 `;
 
 const ProjectCardContainer = styled.div`
-  margin-top:100px;
+  margin:100px 0;
   display:flex;
   flex-wrap:wrap;
 `;

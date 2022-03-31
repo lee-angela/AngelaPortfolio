@@ -14,14 +14,38 @@ export default function ProjectCards(props) {
         </Link>
       </ImgHolder>
       <CardTitle>{props.title}</CardTitle>
+
       <CardDescription>
-        <p>{props.description} </p>
-         <Link to={props.link} style={{"color":"#0500FF","textDecoration":"none"}}>Read more &gt;</Link>
+        <p>{props.description} <Link to={props.link} style={{"color":"#0500FF","textDecoration":"none"}}>Read more &gt;</Link></p>
       </CardDescription>
+
+      <TagContainer>
+        {props.tags && props.tags.map((tag, i) => (
+          <TagPill>
+            {tag}
+          </TagPill>
+        ))}
+      </TagContainer>
+
     </CustomCard>
   );
 }
-
+const TagContainer = styled.div`
+    display:flex;
+    align-items: flex-start;
+    align-content:flex-start;
+    gap:6px;
+    flex-wrap:wrap;
+    margin:0 0 10px;
+`;
+const TagPill = styled.div`
+  border-radius:20px;
+  font-size:13px;
+  background:#f0f0f0;
+  font-family:'Space Mono', monospace;
+  display:inline-block;
+  padding:4px 20px;
+`;
 const CustomCard = styled.div`
   padding:30px;
   display:flex;
@@ -45,6 +69,7 @@ const CardImg = styled.img`
 const CardTitle = styled.div`
   margin:20px 0 10px;
   font-family:'Space Mono', monospace;
+  font-size:larger;
   display:block;
   width:100%;
 `;
