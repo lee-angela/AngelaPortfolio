@@ -29,7 +29,7 @@ export default function About() {
                   <img src={profilepic} style={{"maxWidth":"70%"}}/> 
                 </ProfilePic>
                 <ProfileLinks>
-                  <Blurb>Hi there! I'm Angela – I love to create things. Whether it's coding new solutions, building creative strategies, or creating beautiful, user-centric designs, I thrive wearing many hats that rely on technical, creative, and strategic expertise.  </Blurb>
+                  <Blurb>Hi there! I'm Angela – I love to create. Whether it's engineering new solutions, creating business strategies, or building beautiful, user-centric designs, I thrive wearing many hats that rely on technical, creative, and strategic expertise.  </Blurb>
                   <Blurb>I'm currently open to new NYC-based or remote roles in the tech space. Please feel free to reach out! I'd love to chat.</Blurb>
                   <p><span style={{"fontFamily":"Space Mono, monospace"}}>LINKEDIN:</span> <CustomLink href="https://www.linkedin.com/in/lee-angela">linkedin.com/in/lee-angela  <MdArrowRightAlt/> </CustomLink> </p>
                   <p><span style={{"fontFamily":"Space Mono, monospace"}}>RESUME:</span> <CustomLink href={pdf}>download my resume <MdArrowRightAlt/> </CustomLink> </p>
