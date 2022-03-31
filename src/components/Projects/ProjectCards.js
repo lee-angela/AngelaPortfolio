@@ -1,18 +1,22 @@
 import React from "react";
 import Button from "react-bootstrap/Button";
 import { BiLinkExternal } from "react-icons/bi";
+import {MdArrowRightAlt} from "react-icons/md"
 import styled from "@emotion/styled";
-
+import { Link } from "react-router-dom";
 
 export default function ProjectCards(props) {
   return (
     <CustomCard>
       <ImgHolder>
-        <CardImg src={props.imgPath} alt="card-img" />
+        <Link to={props.link}>
+          <CardImg src={props.imgPath} alt="card-img" />
+        </Link>
       </ImgHolder>
       <CardTitle>{props.title}</CardTitle>
       <CardDescription>
-        {props.description}
+        <p>{props.description} </p>
+         <Link to={props.link} style={{"color":"#0500FF","textDecoration":"none"}}>Read more &gt;</Link>
       </CardDescription>
     </CustomCard>
   );

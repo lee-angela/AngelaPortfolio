@@ -14,6 +14,7 @@ import forter_element from "../../Assets/Projects/forter_forterelement.png";
 import forter_newbrand from "../../Assets/Projects/forter_newbrand_homepage.png";
 import forter_packaging from "../../Assets/Projects/forter_packaging.png";
 import forter_dashboard from "../../Assets/Projects/forter_productdashboard.jpeg";
+import forter_customers from "../../Assets/Projects/forter_networkandcustomerpage.png"
 
 
 export default function Home() {
@@ -79,35 +80,35 @@ export default function Home() {
 
           <ProjectCardContainer>
             <ProjectCard
-              imgPath={forter_packaging}
+              imgPath={forter_element}
               isBlog={false}
-              title="FORTER: PRODUCT PACKAGING"
-              description="Personal Chat Room or Workspace to share resources and hangout with friends build with react.js, Material-UI, and Firebase. Have features which allows user for realtime messaging, image sharing as well as supports reactions on messages."
-              link="https://github.com/soumyajit4419/Chatify"
+              title="FORTER: FORTER ELEMENT FOR PSPs"
+              description="Launched Forter's core, fraud-prevention software-as-a-service for a new, one-to-many distribution channel."
+              link="/forter-forterelement"
             />
 
             <ProjectCard
               imgPath={forter_newbrand}
               isBlog={false}
-              title="FORTER: BRAND REFRESH"
+              title="FORTER: WEBSITE AND BRAND REFRESH"
               description="My personal blog page build with Next.js and Tailwind Css which takes the content from makdown files and renders it using Next.js. Supports dark mode and easy to write blogs using markdown."
               link="https://github.com/soumyajit4419/Bits-0f-C0de"
             />
 
             <ProjectCard
-              imgPath={forter_element}
+              imgPath={forter_customers}
               isBlog={false}
-              title="FORTER: FORTER ELEMENT FOR PSPs"
-              description="Online code and markdown editor build with react.js. Online Editor which supports html, css, and js code with instant view of website. Online markdown editor for building README file which supports GFM, Custom Html tags with toolbar and instant preview.Both the editor supports auto save of work using Local Storage"
-              link="https://github.com/soumyajit4419/Editor.io"
+              title="FORTER: SALES FEEDBACK LOOP AND INTERNAL DOCUMENTATION"
+              description="Established the first official feedback loop with Forter's sales team through win/loss interviews that became commonplace across the organization."
+              link="https://github.com/soumyajit4419/Bits-0f-C0de"
             />
-
+            
             <ProjectCard
-              imgPath={datadog_browsertestdemo}
+              imgPath={forter_packaging}
               isBlog={false}
-              title="DATADOG: BROWSER TEST DEMO"
-              description="Used the plant disease dataset from Kaggle and trained a image classifer model using 'PyTorch' framework using CNN and Transfer Learning with 38 classes of various plant leaves. The model was successfully able to detect diseased and healthy leaves of 14 unique plants. I was able to achieve an accuracy of 98% by using Resnet34 pretrained model."
-              link="https://github.com/soumyajit4419/Plant_AI"
+              title="FORTER: PRODUCT PACKAGING"
+              description="Strategized packaging, bundling, and naming of products to expand and best represent the scope of Forter's offerings."
+              link="/forter-productpackaging"
             />
 
             <ProjectCard
@@ -118,6 +119,16 @@ export default function Home() {
               Then used Open-CV to detect the face in an image and then pass the face to the classifer to predict the emotion of a person."
               link="https://github.com/soumyajit4419/Face_And_Emotion_Detection"
             />
+
+            <ProjectCard
+              imgPath={datadog_browsertestdemo}
+              isBlog={false}
+              title="DATADOG: BROWSER TEST DEMO"
+              description="Used the plant disease dataset from Kaggle and trained a image classifer model using 'PyTorch' framework using CNN and Transfer Learning with 38 classes of various plant leaves. The model was successfully able to detect diseased and healthy leaves of 14 unique plants. I was able to achieve an accuracy of 98% by using Resnet34 pretrained model."
+              link="https://github.com/soumyajit4419/Plant_AI"
+            />
+
+            
           </ProjectCardContainer>
             
       </CustomContainer>
