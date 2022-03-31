@@ -7,7 +7,11 @@ import Footer from "./components/Footer";
 import Resume from "./components/Resume/ResumeNew";
 
 import ForterElement from "./components/Projects/ForterElement";
-
+import ForterNewWebsite from "./components/Projects/ForterNewWebsite";
+import ForterSalesFeedbackLoop from "./components/Projects/ForterSalesFeedbackLoop";
+import ForterProductPackaging from "./components/Projects/ForterProductPackaging";
+import DatadogSynthetics from "./components/Projects/DatadogSynthetics";
+import DatadogBrowserTestDemo from "./components/Projects/DatadogBrowserTestDemo";
 
 import {
   BrowserRouter as Router,
@@ -43,6 +47,11 @@ function App() {
           <Route path="/resume" element={<Resume />} />
 
           <Route path="/forter-forterelement" element={<ForterElement />} />
+          <Route path="/forter-newwebsite" element={<ForterNewWebsite />} />
+          <Route path="/forter-salesfeedbackloop" element={<ForterSalesFeedbackLoop />} />
+          <Route path="/forter-productpackaging" element={<ForterProductPackaging />} />
+          <Route path="/datadog-synthetics" element={<DatadogSynthetics />} />
+          <Route path="/datadog-browsertestdemo" element={<DatadogBrowserTestDemo />} />
 
           <Route path="*" element={<Navigate to="/"/>} />
         </Routes>

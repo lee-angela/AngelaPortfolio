@@ -92,7 +92,7 @@ export default function Home() {
               isBlog={false}
               title="FORTER: WEBSITE AND BRAND REFRESH"
               description="My personal blog page build with Next.js and Tailwind Css which takes the content from makdown files and renders it using Next.js. Supports dark mode and easy to write blogs using markdown."
-              link="https://github.com/soumyajit4419/Bits-0f-C0de"
+              link="/forter-newwebsite"
             />
 
             <ProjectCard
@@ -100,7 +100,7 @@ export default function Home() {
               isBlog={false}
               title="FORTER: SALES FEEDBACK LOOP AND INTERNAL DOCUMENTATION"
               description="Established the first official feedback loop with Forter's sales team through win/loss interviews that became commonplace across the organization."
-              link="https://github.com/soumyajit4419/Bits-0f-C0de"
+              link="/forter-salesfeedbackloop"
             />
             
             <ProjectCard
@@ -115,17 +115,16 @@ export default function Home() {
               imgPath={datadog_synthetics}
               isBlog={false}
               title="DATADOG: DATADOG SYNTHETICS PRODUCT LAUNCH"
-              description="Trained a CNN classifier using 'FER-2013 dataset' with Keras and tensorflow backened. The classifier sucessfully predicted the various types of emotions of human. And the highest accuracy obtained with the model was 60.1%.
-              Then used Open-CV to detect the face in an image and then pass the face to the classifer to predict the emotion of a person."
-              link="https://github.com/soumyajit4419/Face_And_Emotion_Detection"
+              description="Launched the last product before Datadog's IPO in 2019. Product was geared towards a new, front-end developer audience – new strategy, messaging, content, and training was needed."
+              link="/datadog-synthetics"
             />
 
             <ProjectCard
               imgPath={datadog_browsertestdemo}
               isBlog={false}
               title="DATADOG: BROWSER TEST DEMO"
-              description="Used the plant disease dataset from Kaggle and trained a image classifer model using 'PyTorch' framework using CNN and Transfer Learning with 38 classes of various plant leaves. The model was successfully able to detect diseased and healthy leaves of 14 unique plants. I was able to achieve an accuracy of 98% by using Resnet34 pretrained model."
-              link="https://github.com/soumyajit4419/Plant_AI"
+              description="Collaborated with Datadog's engineering team to create and maintain a new customer-facing demo site for the new Browser Testing product."
+              link="/datadog-browsertestdemo"
             />
 
             
